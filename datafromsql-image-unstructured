@@ -1,0 +1,46 @@
+How to Store Extracted Data
+1. Structured Data
+Best Storage:
+Use a relational database like MySQL,
+Store as rows in tables with columns for each field (name, address, date of birth, etc.).
+
+Example Table:
+
+Code
+Customer
+┌────────────┬──────────────┬──────────────┐
+│ Name       │ DOB          │ Address      │
+├────────────┼──────────────┼──────────────┤
+│ John Doe   │ 1990-01-01   │ 123 Ave, NY  │
+└────────────┴──────────────┴──────────────┘
+Alternative:
+Store as JSON objects in a NoSQL database (MongoDB, DynamoDB) if your data schema is flexible or evolving.
+
+2. Unstructured Data
+Best Storage:
+Use a text column in a database table, or a document store (e.g., MongoDB,).
+
+For searchability: ElasticSearch is ideal.
+For simple storage: Text/BLOB fields in SQL or NoSQL.
+Example:
+
+Code
+CustomerNotes
+┌────────────┬──────────────────────────────────────────────┐
+│ CustomerID │ Notes                                        │
+├────────────┼──────────────────────────────────────────────┤
+│ 1001       │ "Customer prefers email communication..."     │
+└────────────┴──────────────────────────────────────────────┘
+3. Images
+Best Storage:
+Store images in a dedicated file storage (local server, AWS S3, Azure Blob Storage) and keep their file paths or URLs in your database.
+
+Example Table:
+
+Code
+CustomerImages
+┌────────────┬──────────────────────────────────────────────┐
+│ CustomerID │ ImageURL                                    │
+├────────────┼──────────────────────────────────────────────┤
+│ 1001       │ "https://s3.amazonaws.com/bucket/img1.jpg"   │
+└────────────┴──────────────────────────────────────────────┘
