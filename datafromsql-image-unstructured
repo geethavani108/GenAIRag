@@ -14,7 +14,7 @@ Customer
 │ John Doe   │ 1990-01-01   │ 123 Ave, NY  │
 └────────────┴──────────────┴──────────────┘
 Alternative:
-Store as JSON objects in a NoSQL database (MongoDB, DynamoDB) if your data schema is flexible or evolving.
+Store as JSON objects in a NoSQL database (Azure cosmosdb, MongoDB, DynamoDB) if your data schema is flexible or evolving.
 
 2. Unstructured Data
 Best Storage:
